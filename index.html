@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Dynamic Resume Builder</h1>
+    <p>This resume builder is created by <a href="https://www.linkedin.com/in/tabeena-yaseen-s131k00h6/" target="_blank">Tabeena Yaseen</a></p>
+    
+    <form id="resume-form">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="profile-pic">Profile Picture:</label>
+            <input type="file" id="profile-pic" name="profile-pic" accept="image/*" required>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Education</legend>
+            <div id="education-container">
+                <div class="education-entry dynamic-section">
+                    <label for="education-1">Education 1:</label>
+                    <textarea id="education-1" name="education-1" rows="4" required></textarea>
+                </div>
+            </div>
+            <span class="plus-icon" id="add-education">+</span>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Work Experience</legend>
+            <div id="work-experience-container">
+                <div class="work-experience-entry dynamic-section">
+                    <label for="work-experience-1">Work Experience 1:</label>
+                    <textarea id="work-experience-1" name="work-experience-1" rows="4" required></textarea>
+                </div>
+            </div>
+            <span class="plus-icon" id="add-work-experience">+</span>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Skills</legend>
+            <label for="skills">Skills (comma-separated):</label>
+            <input type="text" id="skills" name="skills" required>
+        </fieldset>
+        
+        <button type="submit">Generate Resume</button>
+    </form>
+    
+    <section id="resume">
+        <h2>Generated Resume</h2>
+        <div id="resume-content">
+            <!-- The resume will be dynamically generated here -->
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
